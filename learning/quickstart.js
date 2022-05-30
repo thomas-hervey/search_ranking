@@ -1,5 +1,4 @@
-// NOTE: Docs https://www.elastic.co/guide/en/elasticsearch/client/javascript-api/current/search_examples.html
-// .search helper: https://www.elastic.co/guide/en/elasticsearch/client/javascript-api/current/client-helpers.html#search-helper
+// NOTE: Docs https://www.elastic.co/guide/en/elasticsearch/client/javascript-api/current/introduction.html
 
 'use strict'
 
@@ -29,23 +28,21 @@ async function run () {
 
   await client.index({
     index: 'game-of-thrones',
-    // here we are forcing an index refresh,
-    // otherwise we will not get any result
-    // in the consequent search
-    refresh: true,
     document: {
       character: 'Tyrion Lannister',
       quote: 'A mind needs books like a sword needs a whetstone.'
     }
   })
 
+  // here we are forcing an index refresh, otherwise we will not
+  // get any result in the consequent search
+  await client.indices.refresh({ index: 'game-of-thrones' })
+
   // Let's search!
-  const result = await client.search({
+  const result= await client.search({
     index: 'game-of-thrones',
     query: {
-      match: {
-        quote: 'winter'
-      }
+      match: { quote: 'winter' }
     }
   })
 

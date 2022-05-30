@@ -1,4 +1,5 @@
 // NOTE: Docs https://www.elastic.co/guide/en/elasticsearch/client/javascript-api/current/msearch_examples.html
+// .msearch helper: https://www.elastic.co/guide/en/elasticsearch/client/javascript-api/current/client-helpers.html#multi-search-helper
 
 'use strict'
 

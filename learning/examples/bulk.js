@@ -1,3 +1,6 @@
+// NOTE: Docs https://www.elastic.co/guide/en/elasticsearch/client/javascript-api/current/bulk_examples.html
+// .bulk helper: https://www.elastic.co/guide/en/elasticsearch/client/javascript-api/current/client-helpers.html#bulk-helper
+
 'use strict'
 
 require('array.prototype.flatmap').shim()
