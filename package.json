@@ -1,0 +1,31 @@
+{
+  "dependencies": {
+    "@elastic/elasticsearch": "^8.2.1",
+    "concurrently": "^7.2.1",
+    "fs": "^0.0.1-security",
+    "nodemon": "^2.0.16"
+  },
+  "name": "search_ranking",
+  "description": "Project used to test search ranking adjustments.",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start:build": "tsc -w",
+    "start:run": "nodemon build/index.js",
+    "start": "concurrently npm:start:*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thomas-hervey/search_ranking.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/thomas-hervey/search_ranking/issues"
+  },
+  "homepage": "https://github.com/thomas-hervey/search_ranking#readme",
+  "devDependencies": {
+    "@types/node": "^17.0.36"
+  }
+}
