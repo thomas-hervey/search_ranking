@@ -2,4 +2,6 @@ node_modules
 certs
 .DS_Store
 build
-key.txt
+
+app-search-reference-ui-react-1.6.0/src/key.js
+elasticsearch-js/config.js
