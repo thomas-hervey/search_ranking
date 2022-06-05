@@ -54,5 +54,7 @@ Weighting certain attributes and expansions, or filtering them out.
 
 ## Start
 
-- Start the services: `docker-compose up -d`
-- Stop the services: `docker-compose down -v`
+1. Start the services: `docker-compose up -d`
+2. If needed, stop the services: `docker-compose down -v`
+3. To connect to the cluster via a client (like the elasticsearch Javascript client), connect with certs. To do this, you must copy the certs from one of the services to your local machine. For example, run `docker cp search_ranking_es01_1:/usr/share/elasticsearch/config/certs/ .` to copy the `/certs` folder from within the `search_ranking_es01_1` machine to this repo's directory.
+4. Run a test query against the cluster by running a test script `npx ts-node src/test.ts`

@@ -3,7 +3,8 @@
     "@elastic/elasticsearch": "^8.2.1",
     "concurrently": "^7.2.1",
     "fs": "^0.0.1-security",
-    "nodemon": "^2.0.16"
+    "nodemon": "^2.0.16",
+    "ts-node": "^10.8.1"
   },
   "name": "search_ranking",
   "description": "Project used to test search ranking adjustments.",
