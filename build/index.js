@@ -62,7 +62,7 @@ function runQuickstart() {
         });
         console.log(result.hits.hits);
         // delete index once we're done
-        client.indices.delete({ index: 'game-of-thrones' });
+        // client.indices.delete({ index: 'game-of-thrones' })
     });
 }
 runQuickstart().catch(console.log);
